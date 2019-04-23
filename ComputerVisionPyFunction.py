@@ -7,7 +7,7 @@ def img_analysis():
     from PIL import Image
     from io import BytesIO
     
-    subscription_key = "756a34329ff1430799aee933df7b91b8"
+    subscription_key = "INSERT-KEY-HERE"
     assert subscription_key
     vision_base_url = "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/"
     # You have use the same region from your subscription key in the above address
@@ -41,7 +41,7 @@ def img_analysis_flex(image_urlish):
     from PIL import Image
     from io import BytesIO
     
-    subscription_key = "756a34329ff1430799aee933df7b91b8"
+    subscription_key = "INSERT-KEY-HERE"
     assert subscription_key
     vision_base_url = "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/"
     # You have use the same region from your subscription key in the above address
