@@ -7,7 +7,7 @@ def img_analysis():
     from PIL import Image
     from io import BytesIO
     
-    subscription_key = "VISION_API_KEY"
+    subscription_key = input("enter API key")
     assert subscription_key
     vision_base_url = "https://westcentralus.api.cognitive.microsoft.com/vision/v2.0/"
     # You have use the same region from your subscription key in the above address
