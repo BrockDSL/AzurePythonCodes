@@ -6,8 +6,7 @@ def image_analysis_local(image_path, subscription_key):
     from PIL import Image
     from io import BytesIO
     
-    # Input valid subscription key.
-    #subscription_key = input("Enter your API key")
+	#Make sure that you have input a valid subscriprion key
     assert subscription_key
     
     # You have use the same region from your subscription key in the above address
@@ -16,7 +15,7 @@ def image_analysis_local(image_path, subscription_key):
     
     image_data = open(image_path, "rb").read()
     headers    = {'Ocp-Apim-Subscription-Key': subscription_key, 'Content-Type': 'application/octet-stream'}
-    params     = {'visualFeatures': 'Categories,Description,Color'}
+    params     = {'visualFeatures': 'Description,Color'}
     response = requests.post(analyze_url, headers=headers, params=params, data=image_data)
     response.raise_for_status()
     
@@ -34,9 +33,10 @@ def image_analysis_local(image_path, subscription_key):
     plt.show()
 
 
-pics = ("LIST OF IMAGES TO ANALYSE")
+pics = ("img_beach.jpeg")
 
 
-for pic in pics:
-    image_analysis_local(pic,"Your API Key Here")
+#for pic in pics:
+#    image_analysis_local(pic,"756a34329ff1430799aee933df7b91b8")
 
+image_analysis_local(pics,"756a34329ff1430799aee933df7b91b8")
